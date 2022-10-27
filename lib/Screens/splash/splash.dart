@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../register/register.dart';
 
 class Root extends StatelessWidget {
   const Root({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class Welcome extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.teal[600],
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 300.0, 30.0, 0.0),
+        padding: EdgeInsets.fromLTRB(30.0, 275.0, 30.0, 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -49,7 +50,14 @@ class Welcome extends StatelessWidget {
             SizedBox(height: 50.0),
             Center(
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => RegisterScreen()
+                      ),
+                    );
+                  },
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.teal[900],
                   ),
