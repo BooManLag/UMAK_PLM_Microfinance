@@ -77,7 +77,14 @@ class Welcome extends StatelessWidget {
             SizedBox(height: 5.0),
             Center(
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LoginScreen()
+                      ),
+                    );
+                  },
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.teal[900],
                   ),
