@@ -160,7 +160,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   InkWell(
                     child: Text(
-                      'Sign Up',
+                      'Sign In',
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
