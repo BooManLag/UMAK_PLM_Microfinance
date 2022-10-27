@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-import '../splash/splash.dart';
+import '../login/login.dart';
 import '../components/default_form_field.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -24,7 +23,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       child: Scaffold(
         backgroundColor: Colors.teal[600],
         body: Padding(
-          padding: EdgeInsets.fromLTRB(30.0, 70.0, 30.0, 0.0),
+          padding: EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 0.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -35,6 +34,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 28.0,
+                    fontWeight: FontWeight.bold,
                     letterSpacing: 2.0,
                   ),
                 ),
@@ -170,7 +170,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Welcome()
+                            builder: (context) => LoginScreen()
                         ),
                       );
                     },
