@@ -1,2 +1,2 @@
-# UMAK PLM Microfinance
+# Microfinance
 
