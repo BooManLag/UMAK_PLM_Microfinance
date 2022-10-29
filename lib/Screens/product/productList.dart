@@ -9,100 +9,111 @@ class ProductListScreen extends StatefulWidget {
 }
 
 class _ProductListScreenState extends State<ProductListScreen> {
-  List<ProductList> products = [
-    ProductList(product: 'asda', photo: 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', price: 1.10),
-    ProductList(product: 'asdasdadsa', photo: 'http://cdn.shopify.com/s/files/1/0590/9787/4610/products/LUCKY-ME-PANCIT-CANTON-CALAMANSI-FLAVOR.jpg?v=1651172393', price: 1.10),
-    ProductList(product: 'asdasdaasa', photo: 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', price: 1.10),
-    ProductList(product: 'asda', photo: 'http://cdn.shopify.com/s/files/1/0590/9787/4610/products/LUCKY-ME-PANCIT-CANTON-CALAMANSI-FLAVOR.jpg?v=1651172393', price: 1.10),
-    ProductList(product: 'asda', photo: 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', price: 1.10),
-    ProductList(product: 'asda', photo: 'http://cdn.shopify.com/s/files/1/0590/9787/4610/products/LUCKY-ME-PANCIT-CANTON-CALAMANSI-FLAVOR.jpg?v=1651172393', price: 1.10),
-    ProductList(product: 'asda', photo: 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', price: 1.10),
-    ProductList(product: 'asda', photo: 'http://cdn.shopify.com/s/files/1/0590/9787/4610/products/LUCKY-ME-PANCIT-CANTON-CALAMANSI-FLAVOR.jpg?v=1651172393', price: 1.10),
-    ProductList(product: 'asda', photo: 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', price: 1.10),
-    ProductList(product: 'asda', photo: 'http://cdn.shopify.com/s/files/1/0590/9787/4610/products/LUCKY-ME-PANCIT-CANTON-CALAMANSI-FLAVOR.jpg?v=1651172393', price: 1.10),
+   static List<ProductList> mainProductList = [
+     ProductList('test 1', 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', 1.10),
+     ProductList('test 2', 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', 1.10),
+     ProductList('test 3', 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', 1.10),
+     ProductList('test 4', 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', 1.10),
+     ProductList('test 5', 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', 1.10),
+     ProductList('test 1', 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', 1.10),
+     ProductList('test 2', 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', 1.10),
+     ProductList('test 3', 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', 1.10),
+     ProductList('test 4', 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', 1.10),
+     ProductList('test 5', 'https://www.bushbeans.com/-/media/bushsbeans/salsifyimports/0003940001614_H1N1_R.png', 1.10),
   ];
 
-  Widget productListTemplate(product){
-    return Card(
-      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
-      child: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Flexible(
-              flex: 2,
-              fit: FlexFit.tight,
-              child: Image.network(
-                product.photo,
-                height: 75.0,
-                width: 75.0,
-              ),
-            ),
-            SizedBox(width: 20.0,),
-            Flexible(
-              flex: 4,
-              fit: FlexFit.tight,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    product.product,
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: 2.0,
-                    ),
-                  ),
-                  SizedBox(width: 10.0,),
-                  Text(
-                    '₱${product.price}',
-                    style: TextStyle(
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 2.0,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(width: 20.0,),
-            Flexible(
-              flex: 3,
-              fit: FlexFit.tight,
-              child: Row(
-                children: [
-                  Icon(
-                      Icons.add_shopping_cart
-                  ),
-                  SizedBox(width: 2.0,),
-                  InkWell(
-                    child: Text(
-                      'Add to Cart',
-                      style: TextStyle(
-                        letterSpacing: 1.0,
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    onTap: (){
+  List<ProductList> displayList = List.from(mainProductList);
 
-                    },
-                  ),
-
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+  void updateList(String value){
+    setState(() {
+      displayList = mainProductList.where((element) => element.product!.toLowerCase().contains(value.toLowerCase())).toList();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: products.map((product) => productListTemplate(product)).toList(),
+    return Scaffold(
+      backgroundColor: Colors.teal[600],
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(16.0, 40.0, 16.0, 20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: Text(
+                'Product List',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28.0,
+                    color: Colors.white
+                ),
+              ),
+            ),
+            SizedBox(height: 10.0,),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
+              child: TextField(
+                onChanged: (value) => updateList(value),
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                    borderSide: BorderSide.none,
+                  ),
+                  hintText: 'Example: Canned Sardines',
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: Colors.grey,
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+                child: ListView.builder(
+                    itemCount: displayList.length,
+                    itemBuilder: (context,index) => Card(
+                      child: ListTile(
+                        contentPadding: EdgeInsets.all(8.0),
+                        title: Text(
+                          displayList[index].product!,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0
+                            ),
+                        ),
+                        subtitle: Text(
+                          '₱${displayList[index].price!}',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 16.0
+                            ),
+                        ),
+                        trailing:InkWell(
+                          child: Text(
+                            'Add to Cart',
+                            style: TextStyle(
+                              letterSpacing: 1.0,
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        leading: Image.network(
+                          displayList[index].photo!,
+                          height: 100.0,
+                          width: 100.0,
+                        ),
+                      ),
+                    )
+                )
+              ),
+          ],
+        ),
+      ),
     );
   }
 }

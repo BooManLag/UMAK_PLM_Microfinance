@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../product/productView.dart';
+import '../product/productList.dart';
 import '../finance/finance.dart';
 import '../module/module.dart';
 import '../profile/profile.dart';
@@ -15,7 +15,7 @@ class _StartingScreenState extends State<StartingScreen> {
   int currentIndex = 0;
   final screens = [
     FinanceScreen(),
-    ProductView(),
+    ProductListScreen(),
     ModuleScreen(),
     ProfileScreen()
   ];
