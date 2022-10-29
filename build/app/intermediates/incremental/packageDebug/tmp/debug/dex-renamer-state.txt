@@ -1,4 +1,4 @@
-#Thu Oct 27 22:15:48 CST 2022
+#Sat Oct 29 11:50:43 CST 2022
 base.0=D\:\\projects\\finance\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

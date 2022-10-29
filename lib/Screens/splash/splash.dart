@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/Screens/product/productList.dart';
 import '../register/register.dart';
 import '../login/login.dart';
+import '../product/productView.dart';
 
 class Root extends StatelessWidget {
   const Root({Key? key}) : super(key: key);
@@ -102,6 +104,16 @@ class Welcome extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ProductView()
+            ),
+          );
+        },
       ),
     );
   }
