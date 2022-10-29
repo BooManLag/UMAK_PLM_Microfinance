@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../Lists/product.dart';
+import 'package:get/get.dart';
 
 class ProductListScreen extends StatefulWidget {
   const ProductListScreen({Key? key}) : super(key: key);
@@ -99,7 +100,9 @@ class _ProductListScreenState extends State<ProductListScreen> {
                               borderRadius: BorderRadius.circular(50.0),
                             ),
                           ),
-                          onPressed: () {  },
+                          onPressed: () {
+
+                          },
                           child: Text(
                             "Add to Cart",
                             style: TextStyle(
@@ -118,6 +121,9 @@ class _ProductListScreenState extends State<ProductListScreen> {
               ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
       ),
     );
   }
