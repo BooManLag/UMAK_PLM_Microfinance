@@ -92,13 +92,18 @@ class _ProductListScreenState extends State<ProductListScreen> {
                               fontSize: 16.0
                             ),
                         ),
-                        trailing:InkWell(
+                        trailing: TextButton(
+                          style: TextButton.styleFrom(
+                            backgroundColor: Colors.teal[800],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50.0),
+                            ),
+                          ),
+                          onPressed: () {  },
                           child: Text(
-                            'Add to Cart',
+                            "Add to Cart",
                             style: TextStyle(
-                              letterSpacing: 1.0,
-                              fontSize: 12.0,
-                              fontWeight: FontWeight.w600,
+                              color: Colors.white
                             ),
                           ),
                         ),
