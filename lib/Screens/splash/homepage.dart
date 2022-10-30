@@ -53,7 +53,7 @@ class _StartingScreenState extends State<StartingScreen> {
             icon: Icon(
               Icons.lightbulb_circle_outlined,
             ),
-              label: 'Profile',
+              label: 'About',
           ),
         ],
       ),
