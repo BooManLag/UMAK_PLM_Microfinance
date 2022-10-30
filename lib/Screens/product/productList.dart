@@ -24,6 +24,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
   ];
 
   List<ProductList> displayList = List.from(mainProductList);
+  final ScrollController _controllerOne = ScrollController();
 
   void updateList(String value){
     setState(() {
@@ -72,58 +73,61 @@ class _ProductListScreenState extends State<ProductListScreen> {
               ),
             ),
             Expanded(
-                child: ListView.builder(
-                    itemCount: displayList.length,
-                    itemBuilder: (context,index) => Card(
-                      child: ListTile(
-                        contentPadding: EdgeInsets.all(8.0),
-                        title: Text(
-                          displayList[index].product!,
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20.0
-                            ),
-                        ),
-                        subtitle: Text(
-                          '₱${displayList[index].price!}',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 16.0
-                            ),
-                        ),
-                        trailing: TextButton(
-                          style: TextButton.styleFrom(
-                            backgroundColor: Colors.teal[800],
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50.0),
-                            ),
-                          ),
-                          onPressed: () {
+                child: Scrollbar(
+                  controller: _controllerOne,
+                  thumbVisibility: true,
 
-                          },
-                          child: Text(
-                            "Add to Cart",
+                  radius: Radius.circular(50.0),
+                  child: ListView.builder(
+                      itemCount: displayList.length,
+                      itemBuilder: (context,index) => Card(
+                        child: ListTile(
+                          contentPadding: EdgeInsets.all(8.0),
+                          title: Text(
+                            displayList[index].product!,
                             style: TextStyle(
-                              color: Colors.white
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20.0
+                              ),
+                          ),
+                          subtitle: Text(
+                            '₱${displayList[index].price!}',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16.0
+                              ),
+                          ),
+                          trailing: TextButton(
+                            style: TextButton.styleFrom(
+                              backgroundColor: Colors.teal[800],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(50.0),
+                              ),
+                            ),
+                            onPressed: () {
+
+                            },
+                            child: Text(
+                              "Add to Cart",
+                              style: TextStyle(
+                                color: Colors.white
+                              ),
                             ),
                           ),
+                          leading: Image.network(
+                            displayList[index].photo!,
+                            height: 100.0,
+                            width: 100.0,
+                          ),
                         ),
-                        leading: Image.network(
-                          displayList[index].photo!,
-                          height: 100.0,
-                          width: 100.0,
-                        ),
-                      ),
-                    )
+                      )
+                  ),
                 )
               ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
       ),
     );
   }

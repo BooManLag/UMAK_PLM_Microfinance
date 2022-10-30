@@ -33,9 +33,9 @@ class _StartingScreenState extends State<StartingScreen> {
         items:const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.money,
+              Icons.attach_money,
             ),
-            label: 'Money',
+            label: 'Finance',
           ),
           BottomNavigationBarItem(
             icon: Icon(
