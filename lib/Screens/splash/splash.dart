@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../register/register.dart';
-import '../login/login.dart';
 import 'homepage.dart';
 
 class Root extends StatelessWidget {
@@ -23,7 +21,7 @@ class Welcome extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.teal[600],
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 260.0, 30.0, 0.0),
+        padding: EdgeInsets.fromLTRB(30.0, 280.0, 30.0, 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -49,14 +47,14 @@ class Welcome extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 50.0),
+            SizedBox(height: 40.0),
             Center(
               child: TextButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => RegisterScreen()
+                          builder: (context) => StartingScreen()
                       ),
                     );
                   },
@@ -64,38 +62,12 @@ class Welcome extends StatelessWidget {
                     backgroundColor: Colors.teal[900],
                   ),
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(40.0, 5.0, 40.0, 5.0),
+                    padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                     child: Text(
-                      'Register',
+                      'Go To Finance Manager',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 14.0,
-                      ),
-                    ),
-                  )
-              ),
-            ),
-            SizedBox(height: 5.0),
-            Center(
-              child: TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => LoginScreen()
-                      ),
-                    );
-                  },
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.teal[900],
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(50.0, 5.0, 50.0, 5.0),
-                    child: Text(
-                      'Login',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14.0,
+                        fontSize: 16.0,
                       ),
                     ),
                   )
@@ -103,16 +75,6 @@ class Welcome extends StatelessWidget {
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => StartingScreen()
-            ),
-          );
-        },
       ),
     );
   }

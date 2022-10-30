@@ -17,6 +17,8 @@ INJECTED from D:\projects\finance\android\app\src\main\AndroidManifest.xml:1:1-3
 INJECTED from D:\projects\finance\android\app\src\main\AndroidManifest.xml:1:1-34:12
 INJECTED from D:\projects\finance\android\app\src\main\AndroidManifest.xml:1:1-34:12
 MERGED from D:\projects\finance\android\app\src\main\AndroidManifest.xml:1:1-34:12
+MERGED from [:shared_preferences_android] D:\projects\finance\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider_android] D:\projects\finance\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Admin\.gradle\caches\transforms-3\246793f755122fe14a5802655438cb75\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Admin\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Admin\.gradle\caches\transforms-3\0e0e1a382b52c0572988a1c50e96d2f7\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -55,6 +57,10 @@ uses-sdk
 INJECTED from D:\projects\finance\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\projects\finance\android\app\src\main\AndroidManifest.xml
 INJECTED from D:\projects\finance\android\app\src\main\AndroidManifest.xml
+MERGED from [:shared_preferences_android] D:\projects\finance\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] D:\projects\finance\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] D:\projects\finance\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] D:\projects\finance\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Admin\.gradle\caches\transforms-3\246793f755122fe14a5802655438cb75\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Admin\.gradle\caches\transforms-3\246793f755122fe14a5802655438cb75\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Admin\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41

@@ -33,25 +33,25 @@ class _StartingScreenState extends State<StartingScreen> {
         items:const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.attach_money,
+              Icons.wallet_outlined,
             ),
             label: 'Finance',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.shopping_cart,
+              Icons.shopping_cart_outlined,
             ),
             label: 'Store',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.book,
+              Icons.book_outlined,
             ),
             label: 'Modules',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.person,
+              Icons.lightbulb_circle_outlined,
             ),
               label: 'Profile',
           ),
