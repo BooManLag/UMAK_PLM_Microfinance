@@ -49,7 +49,17 @@ class _FinanceScreenState extends State<FinanceScreen> {
                                     itemCount: transactions.length,
                                     itemBuilder: (context, index) => TransWidget(
                                       transaction: transactions[index],
-                                      onTap: () {},
+                                      onTap: () async {
+                                        await Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) => AddTransactionScreen(
+                                              action: transactionController.deleteTransaction,
+                                              deleteTrans: transactions[index],
+                                            ),
+                                          ),
+                                        );
+                                        setState(() {});
+                                      },
                                     )
                                 );
                               }

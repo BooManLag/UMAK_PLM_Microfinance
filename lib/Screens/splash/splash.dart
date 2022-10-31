@@ -27,7 +27,7 @@ class Welcome extends StatelessWidget {
           children: <Widget>[
             Center(
               child: Text(
-                'E-Pon',
+                'NAME',
                 style: TextStyle(
                   fontSize: 48.0,
                   color: Colors.white,

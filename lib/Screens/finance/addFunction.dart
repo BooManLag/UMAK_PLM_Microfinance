@@ -29,9 +29,10 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final text = widget.deleteTrans != null ? 'Delete Transaction' : 'Add Transaction';
     return Scaffold(
       appBar: AppBar(
-        title: Text('Control'),
+        title: Text(text),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -111,7 +112,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                     await widget.action(note);
                     if (mounted) Navigator.pop(context);
                   },
-                  child: Text('text'),
+                  child: Text(text),
                 ),
               ),
             ],
