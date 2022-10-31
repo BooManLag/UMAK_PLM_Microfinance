@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../controllers/transaction_controller.dart';
+import '../../widgets/transaction_widget.dart';
+import 'addFunction.dart';
 import 'financeCard.dart';
 import 'financeAdd.dart';
 import 'financeTransaction.dart';
@@ -11,129 +14,7 @@ class FinanceScreen extends StatefulWidget {
 }
 
 class _FinanceScreenState extends State<FinanceScreen> {
-  static List<Transactions> transactions = [
-    Transactions(transactionName: 'Drinks', amount: '120', classification: 'expense'),
-    Transactions(transactionName: 'Stipend', amount: '7000', classification: 'income'),
-    Transactions(transactionName: 'Commission', amount: '4000', classification: 'income'),
-    Transactions(transactionName: 'Food', amount: '200', classification: 'expense'),
-    Transactions(transactionName: 'Grocery', amount: '1000', classification: 'expense'),
-    Transactions(transactionName: 'Work', amount: '4000', classification: 'Income'),
-    Transactions(transactionName: 'Drinks', amount: '120', classification: 'expense'),
-  ];
-  final _textcontrollerAMOUNT = TextEditingController();
-  final _textcontrollerITEM = TextEditingController();
-  final _formKey = GlobalKey<FormState>();
-  bool _isIncome = false;
-
-  void _enterTransaction() {
-    setState(() {});
-  }
-
-  void _newTransaction(){
-    showDialog(
-        barrierDismissible: false,
-        context: context,
-        builder: (context){
-          return StatefulBuilder(
-              builder: (context, setState){
-                return AlertDialog(
-                  title: Text(
-                    'NEW TRANSACTION',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 3.5,
-                    ),
-                  ),
-                  content: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              'Expenses',
-                            ),
-                            Switch(
-                              value: _isIncome,
-                              onChanged: (newValue) {
-                                setState(() {
-                                  _isIncome = newValue;
-                                });
-                              },
-                            ),
-                            Text(
-                              'Income',
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 5.0,),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Form(
-                                key: _formKey,
-                                child: TextFormField(
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(),
-                                    hintText: 'Amount',
-                                  ),
-                                  validator: (text) {
-                                    if (text == null || text.isEmpty) {
-                                      return 'Enter an amount';
-                                    }
-                                    return null;
-                                  },
-                                  controller: _textcontrollerAMOUNT,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 5.0,),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  hintText: 'Transaction Name',
-                                ),
-                                controller: _textcontrollerITEM,
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  actions: <Widget>[
-                    MaterialButton(
-                      color: Colors.grey[600],
-                      child:
-                      Text('Cancel', style: TextStyle(color: Colors.white)),
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                    ),
-                    MaterialButton(
-                      color: Colors.grey[600],
-                      child: Text('Enter', style: TextStyle(color: Colors.white)),
-                      onPressed: () {
-                        if (_formKey.currentState!.validate()) {
-                          _enterTransaction();
-                          Navigator.of(context).pop();
-                        }
-                      },
-                    )
-                  ],
-                );
-              }
-          );
-        }
-    );
-  }
-
-  List<Transactions> displayTransaction = List.from(transactions);
+  final TransactionController transactionController = TransactionController();
 
   @override
   Widget build(BuildContext context) {
@@ -154,15 +35,36 @@ class _FinanceScreenState extends State<FinanceScreen> {
                     child: Column(
                       children: [
                         Expanded(
-                          child: ListView.builder(
-                              itemCount: displayTransaction.length,
-                              itemBuilder: (context,index){
-                                return Transactions(
-                                  transactionName: displayTransaction[index].transactionName,
-                                  amount: '${displayTransaction[index].amount}',
-                                  classification: displayTransaction[index].classification,
+                          child: FutureBuilder<List<Transactions>?>(
+                            future: transactionController.getTransactions(),
+                            builder: (context, snapshot){
+                              if(snapshot.hasData){
+                                final List<Transactions> transactions = snapshot.data ?? [];
+                                if(transactions.isEmpty){
+                                  return const Center(
+                                    child: Text('No Transactions Yet'),
+                                  );
+                                }
+                                return ListView.builder(
+                                    itemCount: transactions.length,
+                                    itemBuilder: (context, index) => TransWidget(
+                                      transaction: transactions[index],
+                                      onTap: () {},
+                                    )
                                 );
                               }
+                              if (snapshot.hasError) {
+                                return Center(
+                                  child: Text(
+                                    "An error has occurred ${snapshot.error}",
+                                    textAlign: TextAlign.center,
+                                  ),
+                                );
+                              }
+                              return const Center(
+                                child: CircularProgressIndicator(),
+                              );
+                            }
                           )
                         ),
                       ],
@@ -170,9 +72,18 @@ class _FinanceScreenState extends State<FinanceScreen> {
                   ),
                 ),
             ),
-           AddButton(
-             function: _newTransaction,
-           ),
+            AddButton(
+                function: () async {
+                  await Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => AddTransactionScreen(
+                        action: transactionController.addTransaction,
+                      ),
+                    ),
+                  );
+                  setState(() {});
+                },
+            )
           ],
         ),
       ),
