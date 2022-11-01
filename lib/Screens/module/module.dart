@@ -11,7 +11,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Opportunities")),
+      body: Center(child: Text("Opportunity")),
     );
   }
 }
