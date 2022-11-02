@@ -63,7 +63,6 @@ class _FinanceScreenState extends State<FinanceScreen> {
                                           expenses.add(double.parse(transactions[index].amount));
                                         }
                                       }
-                                      print(incomes.length);
                                       return TransWidget(
                                         transaction: transactions[index],
                                         onTap: () async {
