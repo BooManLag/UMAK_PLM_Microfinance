@@ -54,7 +54,7 @@ class FirstScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'Inter',
-                          fontSize: 13.0,
+                          fontSize: 14.0,
                           color: Color(0xFF6E6E6E)
                         ),
                       ),
@@ -75,7 +75,7 @@ class FirstScreen extends StatelessWidget {
                     SizedBox(height: 25.0,),
                     InkWell(
                       onTap: (){
-                        Navigator.pushReplacement(
+                        Navigator.push(
                           context, 
                           MaterialPageRoute(builder: (context) => SecondScreen())
                         );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/Screens/intro/third.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({Key? key}) : super(key: key);
@@ -15,16 +16,23 @@ class SecondScreen extends StatelessWidget {
                   Container(
                     height: MediaQuery.of(context).size.height/1.58,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 30.0),
+                      padding: const EdgeInsets.only(top: 70.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Image.asset(
-                            'assets/Logo_2.png',
-                            height: 50,
+                          Center(
+                            child: Text(
+                              'Learn where to get scholarships, \nsubsidies, financial grants, trainings, and \nmore that you’re qualified to avail!',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 14.0,
+                                  color: Colors.white
+                              ),
+                            ),
                           ),
                           Image.asset(
-                            'assets/people/first.png',
+                            'assets/people/second.png',
                           )
                         ],
                       ),
@@ -49,36 +57,39 @@ class SecondScreen extends StatelessWidget {
                       SizedBox(height: 20.0,),
                       Center(
                         child: Text(
-                          'Easy to spot a yellow car when you are \nalways thinking of a yellow car.',
+                          'Find financial assistance \nprograms!',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontFamily: 'Inter',
-                              fontSize: 13.0,
-                              color: Color(0xFF6E6E6E)
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 15.0,),
-                      Center(
-                        child: Text(
-                          'Easy to spot opportunity when you \nare always thinking of opportunity.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontFamily: 'Inter',
-                              fontSize: 16.0,
+                              fontSize: 18.0,
                               color: Color(0xFF2F83D6),
                               fontWeight: FontWeight.w700
                           ),
                         ),
                       ),
-                      SizedBox(height: 25.0,),
+                      SizedBox(height: 10.0,),
+                      Center(
+                        child: Text(
+                          'Whether you’re a student, unemployed, or a \nsenior citizen, we’ll help you find services that \nwill aid you, because you deserve to know.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 14.0,
+                              color: Color(0xFF6E6E6E)
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 10.0,),
                       InkWell(
                           onTap: (){
-
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => ThirdScreen())
+                            );
                           },
                           splashColor: Colors.white10,
                           child: Image.asset(
-                            'assets/ring/ring_1.png',
+                            'assets/ring/ring_2.png',
                             height: 100,
                             width: 100,
                           )
