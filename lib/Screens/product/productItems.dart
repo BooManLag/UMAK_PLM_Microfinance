@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'productCart.dart';
 
 class ProductItems extends StatelessWidget {
   final String productName;
@@ -64,7 +65,9 @@ class ProductItems extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-
+                    AddToCart.items.add(productName);
+                    AddToCart.images.add(image);
+                    AddToCart.prices.add(price);
                   },
                   child: Text(
                     "Add to Cart",

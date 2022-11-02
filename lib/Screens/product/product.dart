@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/Screens/product/productCart.dart';
+import 'package:collection/collection.dart';
 import 'productItems.dart';
 import 'productTotal.dart';
+import 'productCart.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({Key? key}) : super(key: key);
@@ -94,6 +97,7 @@ class _ProductScreenState extends State<ProductScreen> {
   ];
 
   List<ProductItems> displayList = List.from(mainProductList);
+  double total = AddToCart.prices.sum;
 
   void updateList(String value){
     setState(() {
@@ -160,7 +164,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 ),
             ),
             SizedBox(height: 10.0,),
-            Total(total: 100.12),
+            Total(total: double.parse(total.toStringAsFixed(2))),
           ],
         ),
       ),

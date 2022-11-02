@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Total extends StatelessWidget {
+class Total extends StatefulWidget {
   final double total;
 
   Total({required this.total});
 
+  @override
+  State<Total> createState() => _TotalState();
+}
+
+class _TotalState extends State<Total> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +22,7 @@ class Total extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Total: ₱${total}',
+            'Total: ₱${widget.total}',
             style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.w500
