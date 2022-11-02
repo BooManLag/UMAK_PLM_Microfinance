@@ -130,7 +130,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 ),
             ),
             SizedBox(height: 10.0,),
-            Total(total: double.parse(total.toStringAsFixed(2))),
+            Total(total: double.parse(total.toStringAsFixed(2)), type: true),
           ],
         ),
       ),
