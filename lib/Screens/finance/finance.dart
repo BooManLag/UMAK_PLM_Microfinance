@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../controllers/transaction_controller.dart';
 import '../../widgets/transaction_widget.dart';
+import 'package:collection/collection.dart';
 import 'addFunction.dart';
 import 'financeCard.dart';
 import 'financeAdd.dart';
@@ -15,6 +16,11 @@ class FinanceScreen extends StatefulWidget {
 
 class _FinanceScreenState extends State<FinanceScreen> {
   final TransactionController transactionController = TransactionController();
+  static List<double> incomes = [];
+  static List<double> expenses = [];
+  late double totalIncome = incomes.sum;
+  late double totalExpense = expenses.sum;
+  late double total = totalIncome - totalExpense;
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +31,9 @@ class _FinanceScreenState extends State<FinanceScreen> {
         child: Column(
           children: [
             MoneyCard(
-              balance: '20,000',
-              income: '200',
-              expenses: '200',
+              balance: total.toString(),
+              income: totalIncome.toString(),
+              expenses: totalExpense.toString(),
             ),
             Expanded(
                 child: Container(
@@ -47,20 +53,34 @@ class _FinanceScreenState extends State<FinanceScreen> {
                                 }
                                 return ListView.builder(
                                     itemCount: transactions.length,
-                                    itemBuilder: (context, index) => TransWidget(
-                                      transaction: transactions[index],
-                                      onTap: () async {
-                                        await Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                            builder: (context) => AddTransactionScreen(
-                                              action: transactionController.deleteTransaction,
-                                              deleteTrans: transactions[index],
+                                    itemBuilder: (context, index) {
+                                      for(int i = 0; i < transactions.length; i++){
+                                        if(incomes.contains(double.parse(transactions[index].amount)) || expenses.contains(double.parse(transactions[index].amount))){
+                                          continue;
+                                        }else if(transactions[index].classification == 'income'){
+                                          incomes.add(double.parse(transactions[index].amount));
+                                        }else{
+                                          expenses.add(double.parse(transactions[index].amount));
+                                        }
+                                      }
+                                      print(incomes.length);
+                                      return TransWidget(
+                                        transaction: transactions[index],
+                                        onTap: () async {
+                                          await Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AddTransactionScreen(
+                                                    action: transactionController
+                                                        .deleteTransaction,
+                                                    deleteTrans: transactions[index],
+                                                  ),
                                             ),
-                                          ),
-                                        );
-                                        setState(() {});
-                                      },
-                                    )
+                                          );
+                                          setState(() {});
+                                        },
+                                      );
+                                    }
                                 );
                               }
                               if (snapshot.hasError) {
