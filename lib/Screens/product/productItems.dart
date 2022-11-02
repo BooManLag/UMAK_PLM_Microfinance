@@ -59,7 +59,7 @@ class ProductItems extends StatelessWidget {
                 ),
                 TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.teal[800],
+                    backgroundColor: Color(0xFFFBBB00),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                     ),

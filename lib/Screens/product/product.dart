@@ -74,64 +74,71 @@ class _ProductScreenState extends State<ProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal[600],
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(10.0,30.0,10.0,10.0),
-        child: Column(
-          children: [
-            Center(
-              child: Text(
-                'Product List',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 28.0,
-                    color: Colors.white
-                ),
-              ),
-            ),
-            SizedBox(height: 5.0,),
-            TextField(
-              onChanged: (value) => updateList(value),
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50.0),
-                  borderSide: BorderSide.none,
-                ),
-                hintText: 'Example: Canned Sardines',
-                prefixIcon: Icon(
-                  Icons.search,
-                  color: Colors.grey,
-                ),
-              ),
-            ),
-            SizedBox(height: 10.0,),
-            Expanded(
-                child: Container(
-                  child: Center(
-                    child: Column(
-                      children: [
-                        Expanded(
-                          child: ListView.builder(
-                              itemCount: displayList.length,
-                              itemBuilder: (context,index){
-                                return ProductItems(
-                                  productName: displayList[index].productName,
-                                  image: displayList[index].image,
-                                  price: displayList[index].price,
-                                );
-                              }
-                          ),
-                        )
-                      ],
-                    ),
+      backgroundColor: Color(0xFF2F83D6),
+      body: GestureDetector(
+        onTap: (){
+          setState(() {
+            total = AddToCart.prices.sum;
+          });
+        },
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(10.0,30.0,10.0,10.0),
+          child: Column(
+            children: [
+              Center(
+                child: Text(
+                  'Basic Necessities List',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 28.0,
+                      color: Colors.white
                   ),
                 ),
-            ),
-            SizedBox(height: 10.0,),
-            Total(total: double.parse(total.toStringAsFixed(2)), type: true),
-          ],
+              ),
+              SizedBox(height: 5.0,),
+              TextField(
+                onChanged: (value) => updateList(value),
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                    borderSide: BorderSide.none,
+                  ),
+                  hintText: 'Example: Canned Sardines',
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: Colors.grey,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10.0,),
+              Expanded(
+                  child: Container(
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: ListView.builder(
+                                itemCount: displayList.length,
+                                itemBuilder: (context,index){
+                                  return ProductItems(
+                                    productName: displayList[index].productName,
+                                    image: displayList[index].image,
+                                    price: displayList[index].price,
+                                  );
+                                }
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+              ),
+              SizedBox(height: 10.0,),
+              Total(total: double.parse(total.toStringAsFixed(2)), type: true),
+            ],
+          ),
         ),
       ),
     );

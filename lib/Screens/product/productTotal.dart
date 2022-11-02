@@ -18,7 +18,7 @@ class _TotalState extends State<Total> {
     return Container(
       padding: EdgeInsets.fromLTRB(10.0, 5.0, 0.0, 5.0),
       decoration: BoxDecoration(
-        color: Colors.grey[300],
+        color: Colors.white,
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Row(
@@ -44,7 +44,7 @@ class _TotalState extends State<Total> {
             margin: EdgeInsets.only(right: 20),
             padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
             decoration: BoxDecoration(
-              color: Colors.teal[800],
+              color: Color(0xFFFBBB00),
               borderRadius: BorderRadius.circular(20.0),
             ),
             child: InkWell(
