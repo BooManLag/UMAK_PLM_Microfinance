@@ -24,10 +24,10 @@ class ProductItems extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Image.network(
+                    Image.asset(
                       image,
-                      height: 90.0,
-                      width: 90.0,
+                      height: 80.0,
+                      width: 80.0,
                     ),
                     SizedBox(width: 10,),
                     Column(
@@ -36,10 +36,13 @@ class ProductItems extends StatelessWidget {
                       children: [
                         Text(
                           productName,
+                          maxLines: 10,
+                          overflow: TextOverflow.visible,
                           style: TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
-                            letterSpacing: 1.0
+                            letterSpacing: 1.0,
+
                           ),
                         ),
                         Text(
