@@ -88,7 +88,7 @@ class ThirdScreen extends StatelessWidget {
                             Navigator.popUntil(context, (route) => route.isFirst);
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => StartingScreen())
+                                MaterialPageRoute(builder: (context) => StartingScreen(currentIndex: 0,))
                             );
                           },
                           splashColor: Colors.white10,

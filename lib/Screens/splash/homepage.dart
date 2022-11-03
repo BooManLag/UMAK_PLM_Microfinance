@@ -5,14 +5,14 @@ import '../module/module.dart';
 import '../dashboard//dashboard.dart';
 
 class StartingScreen extends StatefulWidget {
-  const StartingScreen({Key? key}) : super(key: key);
+  int currentIndex = 0;
+  StartingScreen({super.key, required this.currentIndex});
 
   @override
   State<StartingScreen> createState() => _StartingScreenState();
 }
 
 class _StartingScreenState extends State<StartingScreen> {
-  int currentIndex = 0;
   final screens = [
     DashboardScreen(),
     FinanceScreen(),
@@ -23,7 +23,7 @@ class _StartingScreenState extends State<StartingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[currentIndex],
+      body: screens[widget.currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         iconSize: 30,
@@ -36,8 +36,8 @@ class _StartingScreenState extends State<StartingScreen> {
             fontFamily: 'Inter',
             fontWeight: FontWeight.w700
         ),
-        currentIndex: currentIndex,
-        onTap: (index) => setState(() => currentIndex = index),
+        currentIndex: widget.currentIndex,
+        onTap: (index) => setState(() => widget.currentIndex = index),
         items:const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
