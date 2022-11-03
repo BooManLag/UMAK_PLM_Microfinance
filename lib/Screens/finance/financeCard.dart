@@ -49,10 +49,10 @@ class MoneyCard extends StatelessWidget {
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.grey[300],
+                              color: Colors.green,
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
+                                  color: Colors.black.withOpacity(0.4),
                                   blurRadius: 4,
                                   spreadRadius: 3,
                                 )
@@ -61,7 +61,7 @@ class MoneyCard extends StatelessWidget {
                             child: Center(
                                 child: Icon(
                                   Icons.arrow_upward,
-                                  color: Colors.green,
+                                  color: Colors.white,
                                 ),
                             ),
                         ),
@@ -95,10 +95,10 @@ class MoneyCard extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                              color: Colors.grey[300],
+                              color: Colors.red,
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
+                                  color: Colors.black.withOpacity(0.4),
                                   blurRadius: 4,
                                   spreadRadius: 3,
                                 )
@@ -107,7 +107,7 @@ class MoneyCard extends StatelessWidget {
                           child: Center(
                             child: Icon(
                               Icons.arrow_downward,
-                              color: Colors.red,
+                              color: Colors.white,
                             ),
                           ),
                         ),
