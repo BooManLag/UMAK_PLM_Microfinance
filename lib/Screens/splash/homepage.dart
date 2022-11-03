@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../product/product.dart';
 import '../finance/finance.dart';
 import '../module/module.dart';
-import '../profile/profile.dart';
+import '../dashboard//dashboard.dart';
 
 class StartingScreen extends StatefulWidget {
   const StartingScreen({Key? key}) : super(key: key);
@@ -15,10 +14,10 @@ class StartingScreen extends StatefulWidget {
 class _StartingScreenState extends State<StartingScreen> {
   int currentIndex = 0;
   final screens = [
+    DashboardScreen(),
     FinanceScreen(),
     ProductScreen(),
     ModuleScreen(),
-    ProfileScreen()
   ];
 
   @override
@@ -42,6 +41,12 @@ class _StartingScreenState extends State<StartingScreen> {
         items:const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
+              Icons.house_outlined,
+            ),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
             Icons.calculate_outlined
           ),
             label: 'Finance',
@@ -57,12 +62,6 @@ class _StartingScreenState extends State<StartingScreen> {
               Icons.location_on_outlined,
             ),
             label: 'Opportunity',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.house_outlined,
-            ),
-              label: 'About',
           ),
         ],
       ),

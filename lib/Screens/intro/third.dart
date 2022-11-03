@@ -85,6 +85,7 @@ class ThirdScreen extends StatelessWidget {
                       SizedBox(height: 25.0,),
                       InkWell(
                           onTap: (){
+                            Navigator.popUntil(context, (route) => route.isFirst);
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) => StartingScreen())
