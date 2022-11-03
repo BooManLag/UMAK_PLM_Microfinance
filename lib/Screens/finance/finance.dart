@@ -7,6 +7,10 @@ import 'financeCard.dart';
 import 'financeAdd.dart';
 import 'financeTransaction.dart';
 
+class AccessTotal{
+  static double total = 0.0;
+}
+
 class FinanceScreen extends StatefulWidget {
   const FinanceScreen({Key? key}) : super(key: key);
 
@@ -32,6 +36,7 @@ class _FinanceScreenState extends State<FinanceScreen> {
             totalIncome = incomes.sum;
             totalExpense = expenses.sum;
             total = totalIncome - totalExpense;
+            AccessTotal.total = total;
           });
         },
         child: Padding(
