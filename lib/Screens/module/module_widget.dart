@@ -9,8 +9,10 @@ class ModuleWidget extends StatelessWidget {
   final String desc;
   final String location;
   final String category;
+  final String link;
+  final String secImg;
 
-  ModuleWidget({required this.photo,required this.title,required this.company,required this.desc,required this.location,required this.category});
+  ModuleWidget({required this.photo,required this.title,required this.company,required this.desc,required this.location,required this.category, required this.link, required this.secImg});
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +20,21 @@ class ModuleWidget extends StatelessWidget {
       onTap: (){
         Navigator.push(context,
             MaterialPageRoute(
-                builder: (context) => ModuleContent()
+                builder: (context) => ModuleContent(
+                  title: title,
+                  image: secImg,
+                  desc: desc,
+                  location: location,
+                  category: category,
+                  link: link,
+                )
             )
         );
       },
       child: Padding(
         padding: EdgeInsets.only(bottom: 15),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(15.0),
+          borderRadius: BorderRadius.circular(10.0),
           child: Container(
             decoration: BoxDecoration(
                 color: Colors.grey[100],
