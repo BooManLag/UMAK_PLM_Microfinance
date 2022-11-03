@@ -1,6 +1,9 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:untitled/Screens/finance/finance.dart';
+import 'package:untitled/Screens/module/categories/unemployed.dart';
+import 'package:untitled/Screens/splash/homepage.dart';
+
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -125,7 +128,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           ],
                         ),
                         InkWell(
-                          onTap: (){},
+                          onTap: (){
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(builder: (context) => StartingScreen(currentIndex: 3,))
+                            );
+                          },
                           child: Text(
                             'View All',
                             style: TextStyle(
@@ -171,7 +179,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                         SizedBox(width: 10,),
                         InkWell(
-                          onTap: (){},
+                          onTap: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => UnemployedList())
+                            );
+                          },
                           child: Container(
                             height: 150,
                             width: 123,
@@ -252,31 +265,39 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           ),
                         ),
                         SizedBox(height: 10,),
-                        Container(
-                          height: 120,
-                          width: 190,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
-                            color: Colors.grey[700],
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(15.0,25.0,15.0,10.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Text(
-                                  'View up to date product prices in the market to help you budget',
-                                  style: TextStyle(
-                                    fontFamily: 'Inter',
-                                    color: Colors.white
+                        InkWell(
+                          onTap: (){
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(builder: (context) => StartingScreen(currentIndex: 2,))
+                            );
+                          },
+                          child: Container(
+                            height: 120,
+                            width: 190,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              color: Colors.grey[700],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(15.0,25.0,15.0,10.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    'View up to date product prices in the market to help you budget',
+                                    style: TextStyle(
+                                      fontFamily: 'Inter',
+                                      color: Colors.white
+                                    ),
+                                    textAlign: TextAlign.justify,
                                   ),
-                                  textAlign: TextAlign.justify,
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_outlined,
-                                  color: Colors.white,
-                                )
-                              ],
+                                  Icon(
+                                    Icons.arrow_forward_outlined,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         )
@@ -296,31 +317,39 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           ),
                         ),
                         SizedBox(height: 10,),
-                        Container(
-                          height: 120,
-                          width: 190,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
-                            color: Colors.grey[700],
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(15.0,35.0,15.0,10.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Text(
-                                  'View your current financial standing',
-                                  style: TextStyle(
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
+                        InkWell(
+                          onTap: (){
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(builder: (context) => StartingScreen(currentIndex: 1,))
+                            );
+                          },
+                          child: Container(
+                            height: 120,
+                            width: 190,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              color: Colors.grey[700],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(15.0,35.0,15.0,10.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    'View your current financial standing',
+                                    style: TextStyle(
+                                        fontFamily: 'Inter',
+                                        color: Colors.white
+                                    ),
                                   ),
-                                ),
-                                SizedBox(height: 7,),
-                                Icon(
-                                  Icons.arrow_forward_outlined,
-                                  color: Colors.white,
-                                )
-                              ],
+                                  SizedBox(height: 7,),
+                                  Icon(
+                                    Icons.arrow_forward_outlined,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         )
