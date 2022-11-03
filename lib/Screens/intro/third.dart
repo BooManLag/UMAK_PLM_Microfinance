@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/Screens/intro/fourth.dart';
+import 'package:untitled/Screens/intro/third.dart';
+import 'package:untitled/Screens/splash/homepage.dart';
+
+import 'third.dart';
 
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({Key? key}) : super(key: key);
@@ -16,13 +19,13 @@ class ThirdScreen extends StatelessWidget {
                   Container(
                     height: MediaQuery.of(context).size.height/1.58,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 70.0),
+                      padding: const EdgeInsets.only(top: 80.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Center(
                             child: Text(
-                              '“If you give a man a fish, you feed him for a \nday. If you teach a man to fish, you feed him \nfor a lifetime.”',
+                              'Make money work for you, instead of working \nfor money.',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   fontFamily: 'Inter',
@@ -32,7 +35,7 @@ class ThirdScreen extends StatelessWidget {
                             ),
                           ),
                           Image.asset(
-                            'assets/people/third.png',
+                            'assets/people/sixth.png',
                           )
                         ],
                       ),
@@ -54,10 +57,10 @@ class ThirdScreen extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      SizedBox(height: 20.0,),
+                      SizedBox(height: 35.0,),
                       Center(
                         child: Text(
-                          'Discover trainings for you \nto upskill!',
+                          'Manage your finances!',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontFamily: 'Inter',
@@ -70,7 +73,7 @@ class ThirdScreen extends StatelessWidget {
                       SizedBox(height: 15.0,),
                       Center(
                         child: Text(
-                          'See skill trainings from private and \ngovernment services you can apply.',
+                          'Stay informed of product prices to \nhelp you stay on top of your budget.',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontFamily: 'Inter',
@@ -79,12 +82,12 @@ class ThirdScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20.0,),
+                      SizedBox(height: 25.0,),
                       InkWell(
                           onTap: (){
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => FourthScreen())
+                                MaterialPageRoute(builder: (context) => StartingScreen())
                             );
                           },
                           splashColor: Colors.white10,

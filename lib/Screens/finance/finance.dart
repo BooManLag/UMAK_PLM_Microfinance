@@ -25,7 +25,7 @@ class _FinanceScreenState extends State<FinanceScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF2F83D6),
+      backgroundColor: Color(0xFFFAFAFA),
       body: GestureDetector(
         onTap: (){
           setState(() {

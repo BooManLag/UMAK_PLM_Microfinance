@@ -100,34 +100,6 @@ class Welcome extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 5.0),
-                    Center(
-                      child: TextButton(
-                        onPressed: (){
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => StartingScreen()
-                              )
-                          );
-                        },
-                        style: TextButton.styleFrom(
-                            backgroundColor: Colors.white
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(12.0,5.0,12.0,5.0),
-                          child: Text(
-                            'Go to Finance Manager',
-                            style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xFF6E6E6E)
-                            ),
-                          ),
-                        ),
-                      ),
-                    )
                   ],
                 ),
                 SizedBox(height: 10.0),

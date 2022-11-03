@@ -57,7 +57,7 @@ class SecondScreen extends StatelessWidget {
                       SizedBox(height: 20.0,),
                       Center(
                         child: Text(
-                          'Find financial assistance \nprograms!',
+                          'Find financial assistance \nprograms & trainings!',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontFamily: 'Inter',
