@@ -15,7 +15,7 @@ class ModuleContent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: const BackButton(
-          color: Colors.white,
+          color: Color(0xFFEEEEEE),
         ),
         backgroundColor: Color(0xFF2F83D6),
         bottomOpacity: 0.0,
@@ -43,7 +43,7 @@ class ModuleContent extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(15.0),
+                    borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(15.0,10.0,15.0,20.0),
@@ -83,7 +83,7 @@ class ModuleContent extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(15.0),
+                    borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(15.0,10.0,15.0,10.0),
@@ -119,7 +119,7 @@ class ModuleContent extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(15.0),
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Padding(
                       padding: EdgeInsets.fromLTRB(15.0,10.0,15.0,10.0),
@@ -151,7 +151,7 @@ class ModuleContent extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(15.0),
+                    borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(15.0,10.0,15.0,10.0),

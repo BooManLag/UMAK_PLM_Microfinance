@@ -13,7 +13,7 @@ class MoneyCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
+          color: Color(0xFFEEEEEE),
         ),
         height: 200.0,
         child: Center(
@@ -61,7 +61,7 @@ class MoneyCard extends StatelessWidget {
                             child: Center(
                                 child: Icon(
                                   Icons.arrow_upward,
-                                  color: Colors.white,
+                                  color: Color(0xFFEEEEEE),
                                 ),
                             ),
                         ),
@@ -107,7 +107,7 @@ class MoneyCard extends StatelessWidget {
                           child: Center(
                             child: Icon(
                               Icons.arrow_downward,
-                              color: Colors.white,
+                              color: Color(0xFFEEEEEE),
                             ),
                           ),
                         ),

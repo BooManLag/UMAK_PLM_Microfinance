@@ -99,7 +99,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 onChanged: (value) => updateList(value),
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.white,
+                  fillColor: Color(0xFFEEEEEE),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(50.0),
                     borderSide: BorderSide.none,

@@ -17,10 +17,10 @@ class TransWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(bottom: 10.0),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(15.0),
+          borderRadius: BorderRadius.circular(10.0),
           child: Container(
             padding: EdgeInsets.all(5.0),
-            color: Colors.white,
+            color: Color(0xFFEEEEEE),
             height: 50.0,
             child: Center(
                 child: Row(
@@ -37,7 +37,7 @@ class TransWidget extends StatelessWidget {
                           child: Center(
                             child: Icon(
                               transaction.classification == 'expense' ? Icons.arrow_downward : Icons.arrow_upward,
-                              color: Colors.white,
+                              color: Color(0xFFEEEEEE),
                             ),
                           ),
                         ),

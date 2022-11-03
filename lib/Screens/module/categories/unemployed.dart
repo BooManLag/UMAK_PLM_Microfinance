@@ -29,7 +29,7 @@ class _UnemployedListState extends State<UnemployedList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFEEEEEE),
       appBar: AppBar(
         leading: const BackButton(
           color: Color(0xFF2F83D6),

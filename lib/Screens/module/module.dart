@@ -12,7 +12,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF2F83D6),
+      backgroundColor: Color(0xFFFAFAFA),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(10.0,50.0,10.0,30.0),
         child: Column(
@@ -24,7 +24,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
                     child: Text(
                         'Select your category',
                         style: TextStyle(
-                          color: Color(0xFFFBBB00),
+                          color: Color(0xFF2F83D6),
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w600,
                           fontSize: 24
@@ -36,7 +36,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
                     child: Text(
                       'Which among these would best describe you?',
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Color(0xFF303030),
                           fontFamily: 'Inter',
                           fontSize: 16
                       ),
@@ -55,12 +55,12 @@ class _ModuleScreenState extends State<ModuleScreen> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(20.0),
-                          bottomLeft: Radius.circular(20.0),
-                          topRight: Radius.circular(20.0),
-                          topLeft: Radius.circular(20.0),
+                          bottomRight: Radius.circular(10.0),
+                          bottomLeft: Radius.circular(10.0),
+                          topRight: Radius.circular(10.0),
+                          topLeft: Radius.circular(10.0),
                         )
                     ),
                     height: 150,
@@ -96,12 +96,12 @@ class _ModuleScreenState extends State<ModuleScreen> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(20.0),
-                          bottomLeft: Radius.circular(20.0),
-                          topRight: Radius.circular(20.0),
-                          topLeft: Radius.circular(20.0),
+                          bottomRight: Radius.circular(10.0),
+                          bottomLeft: Radius.circular(10.0),
+                          topRight: Radius.circular(10.0),
+                          topLeft: Radius.circular(10.0),
                         )
                     ),
                     height: 150,
@@ -141,12 +141,12 @@ class _ModuleScreenState extends State<ModuleScreen> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(20.0),
-                          bottomLeft: Radius.circular(20.0),
-                          topRight: Radius.circular(20.0),
-                          topLeft: Radius.circular(20.0),
+                          bottomRight: Radius.circular(10.0),
+                          bottomLeft: Radius.circular(10.0),
+                          topRight: Radius.circular(10.0),
+                          topLeft: Radius.circular(10.0),
                         )
                     ),
                     height: 150,
@@ -178,12 +178,12 @@ class _ModuleScreenState extends State<ModuleScreen> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(20.0),
-                          bottomLeft: Radius.circular(20.0),
-                          topRight: Radius.circular(20.0),
-                          topLeft: Radius.circular(20.0),
+                          bottomRight: Radius.circular(10.0),
+                          bottomLeft: Radius.circular(10.0),
+                          topRight: Radius.circular(10.0),
+                          topLeft: Radius.circular(10.0),
                         )
                     ),
                     height: 150,
@@ -223,12 +223,12 @@ class _ModuleScreenState extends State<ModuleScreen> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(20.0),
-                          bottomLeft: Radius.circular(20.0),
-                          topRight: Radius.circular(20.0),
-                          topLeft: Radius.circular(20.0),
+                          bottomRight: Radius.circular(10.0),
+                          bottomLeft: Radius.circular(10.0),
+                          topRight: Radius.circular(10.0),
+                          topLeft: Radius.circular(10.0),
                         )
                     ),
                     height: 150,
@@ -261,12 +261,12 @@ class _ModuleScreenState extends State<ModuleScreen> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(20.0),
-                          bottomLeft: Radius.circular(20.0),
-                          topRight: Radius.circular(20.0),
-                          topLeft: Radius.circular(20.0),
+                          bottomRight: Radius.circular(10.0),
+                          bottomLeft: Radius.circular(10.0),
+                          topRight: Radius.circular(10.0),
+                          topLeft: Radius.circular(10.0),
                         )
                     ),
                     height: 150,

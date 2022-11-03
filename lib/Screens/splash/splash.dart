@@ -28,7 +28,7 @@ class Welcome extends StatelessWidget {
           Container(
             height: MediaQuery.of(context).size.height/1.6,
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: Color(0xFFEEEEEE),
                 borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(500.0),
                     bottomLeft: Radius.circular(500.0)

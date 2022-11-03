@@ -45,7 +45,7 @@ class SecondScreen extends StatelessWidget {
                   Container(
                     height: MediaQuery.of(context).size.height/2.72414,
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.only(
                             topRight: Radius.circular(50.0),
                             topLeft: Radius.circular(50.0)

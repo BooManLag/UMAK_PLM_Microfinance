@@ -53,7 +53,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                     border: OutlineInputBorder(
                       borderSide: const BorderSide(
                         width: 1,
-                        color: Colors.white,
+                        color: Color(0xFFEEEEEE),
                       ),
                       borderRadius: BorderRadius.circular(16),
                     ),
@@ -73,7 +73,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                     border: OutlineInputBorder(
                       borderSide: const BorderSide(
                         width: 1,
-                        color: Colors.white,
+                        color: Color(0xFFEEEEEE),
                       ),
                       borderRadius: BorderRadius.circular(16),
                     ),
@@ -93,7 +93,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                     border: OutlineInputBorder(
                       borderSide: const BorderSide(
                         width: 1,
-                        color: Colors.white,
+                        color: Color(0xFFEEEEEE),
                       ),
                       borderRadius: BorderRadius.circular(16),
                     ),

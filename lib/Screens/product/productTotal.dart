@@ -18,7 +18,7 @@ class _TotalState extends State<Total> {
     return Container(
       padding: EdgeInsets.fromLTRB(10.0, 5.0, 0.0, 5.0),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Color(0xFFEEEEEE),
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Row(
@@ -45,7 +45,7 @@ class _TotalState extends State<Total> {
             padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
             decoration: BoxDecoration(
               color: Color(0xFFFBBB00),
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.circular(10.0),
             ),
             child: InkWell(
               onTap: (){
@@ -58,7 +58,7 @@ class _TotalState extends State<Total> {
                 children: [
                   Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.white,
+                    color: Color(0xFFEEEEEE),
                   ),
                   Text(
                     'Go To List',

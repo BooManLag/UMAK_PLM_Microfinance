@@ -23,7 +23,7 @@ class AddButton extends StatelessWidget {
             child: Text(
               '+',
               style: TextStyle(
-                  color: Colors.white,
+                  color: Color(0xFFEEEEEE),
                   fontSize: 40.0
               ),
             ),
