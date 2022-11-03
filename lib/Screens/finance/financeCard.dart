@@ -34,7 +34,8 @@ class MoneyCard extends StatelessWidget {
                 style: TextStyle(
                     fontFamily: 'Inter',
                     letterSpacing: 5.0,
-                    fontSize: 36.0
+                    fontSize: 36.0,
+                    color:  Color(0xFF6E6E6E)
                 ),
               ),
               Padding(
@@ -71,7 +72,8 @@ class MoneyCard extends StatelessWidget {
                             Text(
                               'Income',
                               style: TextStyle(
-                                fontFamily: 'Inter',
+                                  fontFamily: 'Inter',
+                                  color:  Color(0xFF6E6E6E)
                               ),
                             ),
                             SizedBox(height: 5),
@@ -79,6 +81,7 @@ class MoneyCard extends StatelessWidget {
                               '₱' + income,
                               style: TextStyle(
                                 fontWeight: FontWeight.w700,
+                                color:  Color(0xFF6E6E6E),
                                 fontFamily: 'Inter',
                               ),
                             ),
@@ -115,15 +118,17 @@ class MoneyCard extends StatelessWidget {
                             Text(
                               'Expenses',
                               style: TextStyle(
-                                fontFamily: 'Inter',
+                                  fontFamily: 'Inter',
+                                  color:  Color(0xFF6E6E6E)
                               ),
                             ),
                             SizedBox(height: 5),
                             Text(
                               '₱' + expenses,
                               style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: 'Inter',
+                                  color:  Color(0xFF6E6E6E)
                               ),
                             ),
                           ],

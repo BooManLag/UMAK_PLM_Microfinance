@@ -56,7 +56,14 @@ class _FinanceScreenState extends State<FinanceScreen> {
                                   final List<Transactions> transactions = snapshot.data ?? [];
                                   if(transactions.isEmpty){
                                     return const Center(
-                                      child: Text('No Transactions Yet'),
+                                      child: Text(
+                                        'No Transactions Yet',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontFamily: 'Inter',
+                                            fontWeight: FontWeight.w700
+                                        ),
+                                      ),
                                     );
                                   }
                                   return ListView.builder(
@@ -95,6 +102,11 @@ class _FinanceScreenState extends State<FinanceScreen> {
                                     child: Text(
                                       "An error has occurred ${snapshot.error}",
                                       textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontFamily: 'Inter',
+                                          fontWeight: FontWeight.w700
+                                      ),
                                     ),
                                   );
                                 }

@@ -41,16 +41,17 @@ class ProductItems extends StatelessWidget {
                           overflow: TextOverflow.visible,
                           style: TextStyle(
                             fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w600,
                             letterSpacing: 1.0,
-
+                            fontFamily: 'Inter',
                           ),
                         ),
                         Text(
                           '₱${price}',
                           style: TextStyle(
                               fontSize: 16.0,
-                              fontWeight: FontWeight.w400
+                              fontWeight: FontWeight.w400,
+                              fontFamily: 'Inter',
                           ),
                         ),
                       ],

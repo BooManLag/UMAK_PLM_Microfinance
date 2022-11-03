@@ -32,12 +32,12 @@ class TransWidget extends StatelessWidget {
                           padding: EdgeInsets.all(5.0),
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.grey[400]
+                              color: Colors.grey[300]
                           ),
                           child: Center(
                             child: Icon(
-                              Icons.attach_money,
-                              color: Colors.white,
+                              transaction.classification == 'expense' ? Icons.arrow_downward : Icons.arrow_upward,
+                              color: transaction.classification == 'expense' ?  Colors.red :  Colors.green,
                             ),
                           ),
                         ),

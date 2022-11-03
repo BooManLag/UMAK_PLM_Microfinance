@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../product/product.dart';
 import '../finance/finance.dart';
 import '../module/module.dart';
@@ -26,15 +27,23 @@ class _StartingScreenState extends State<StartingScreen> {
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        iconSize: 25,
-        unselectedItemColor: Colors.black,
+        iconSize: 30,
+        unselectedItemColor: Color(0xFF6E6E6E),
+        unselectedLabelStyle: TextStyle(
+            fontFamily: 'Inter',
+            fontWeight: FontWeight.w200
+        ),
+        selectedLabelStyle: TextStyle(
+            fontFamily: 'Inter',
+            fontWeight: FontWeight.w700
+        ),
         currentIndex: currentIndex,
         onTap: (index) => setState(() => currentIndex = index),
         items:const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.wallet_outlined,
-            ),
+            Icons.calculate_outlined
+          ),
             label: 'Finance',
           ),
           BottomNavigationBarItem(
@@ -45,13 +54,13 @@ class _StartingScreenState extends State<StartingScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.book_outlined,
+              Icons.location_on_outlined,
             ),
-            label: 'Modules',
+            label: 'Opportunity',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.lightbulb_circle_outlined,
+              Icons.house_outlined,
             ),
               label: 'About',
           ),

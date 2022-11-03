@@ -15,7 +15,6 @@ class _ProductScreenState extends State<ProductScreen> {
   static List<ProductItems> mainProductList = [
     ProductItems(productName: 'Canned Sardines -\n555 Bonus Pack', image: 'assets/products/canned_sardines/555.png', price: 17.25),
     ProductItems(productName: 'Canned Sardines -\nAtami', image: 'assets/products/canned_sardines/Atami.png', price: 17.77),
-    ProductItems(productName: 'Canned Sardines -\nFamily\'s Budget Pack', image: 'assets/products/canned_sardines/Family.jpg', price: 15.25),
     ProductItems(productName: 'Canned Sardines -\nHakone', image: 'assets/products/canned_sardines/Hakone.png', price: 13.4),
     ProductItems(productName: 'Canned Sardines -\nKing Cup', image: 'assets/products/canned_sardines/King.png', price: 16.5),
     ProductItems(productName: 'Canned Sardines -\nLucky 7', image: 'assets/products/canned_sardines/Lucky.png', price: 17.25),
