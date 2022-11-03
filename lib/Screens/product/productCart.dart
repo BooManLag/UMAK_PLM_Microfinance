@@ -50,7 +50,7 @@ class _GoToCartState extends State<GoToCart> {
                             borderRadius: BorderRadius.circular(10.0),
                             child: Container(
                               padding: EdgeInsets.all(5.0),
-                              color: Color(0xFFEEEEEE),
+                              color: Colors.white,
                               height: 115.0,
                               child: Center(
                                 child: Row(
