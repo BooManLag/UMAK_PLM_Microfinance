@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/Screens/finance/financeTransaction.dart';
-import 'financeTransaction.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddButton extends StatelessWidget {
   final function;
@@ -12,9 +11,9 @@ class AddButton extends StatelessWidget {
     return GestureDetector(
       onTap: function,
       child: Container(
-          margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
-          height: 55.0,
-          width: 55.0,
+          margin: REdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+          height: 55.0.h,
+          width: 55.0.w,
           decoration: BoxDecoration(
             color: Color(0xFFFBBB00),
             shape: BoxShape.circle,
@@ -24,7 +23,7 @@ class AddButton extends StatelessWidget {
               '+',
               style: TextStyle(
                   color: Color(0xFFEEEEEE),
-                  fontSize: 40.0
+                  fontSize: 40.0.sp
               ),
             ),
           )

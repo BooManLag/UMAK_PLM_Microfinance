@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'productCart.dart';
 
 class Total extends StatefulWidget {
@@ -16,7 +16,7 @@ class _TotalState extends State<Total> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(10.0, 5.0, 0.0, 5.0),
+      padding: REdgeInsets.fromLTRB(10.0, 5.0, 0.0, 5.0),
       decoration: BoxDecoration(
         color: Color(0xFFEEEEEE),
         borderRadius: BorderRadius.circular(10.0),
@@ -27,22 +27,22 @@ class _TotalState extends State<Total> {
           if (widget.type) Text(
             'Total: ₱${widget.total}',
             style: TextStyle(
-              fontSize: 20.0,
+              fontSize: 20.0.sp,
               fontWeight: FontWeight.w500
             ),
           ) else Padding(
-            padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+            padding: REdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
             child: Text(
                   'Total: ₱${widget.total}',
                   style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 20.0.sp,
                     fontWeight: FontWeight.w500
                   ),
             ),
           ),
           if (widget.type) Container(
-            margin: EdgeInsets.only(right: 20),
-            padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+            margin: REdgeInsets.only(right: 20),
+            padding: REdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
             decoration: BoxDecoration(
               color: Color(0xFFFBBB00),
               borderRadius: BorderRadius.circular(10.0),

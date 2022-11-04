@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'productCart.dart';
 
 class ProductItems extends StatelessWidget {
@@ -11,13 +12,13 @@ class ProductItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10.0),
+      padding: REdgeInsets.only(bottom: 10.0),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10.0),
         child: Container(
-          padding: EdgeInsets.all(5.0),
+          padding: REdgeInsets.all(5.0),
           color: Colors.white,
-          height: 115.0,
+          height: 115.0.h,
           child: Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -27,10 +28,10 @@ class ProductItems extends StatelessWidget {
                   children: [
                     Image.asset(
                       image,
-                      height: 80.0,
-                      width: 80.0,
+                      height: 80.0.h,
+                      width: 80.0.w,
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(width: 10.w,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +41,7 @@ class ProductItems extends StatelessWidget {
                           maxLines: 10,
                           overflow: TextOverflow.visible,
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 18.0.sp,
                             fontWeight: FontWeight.w600,
                             letterSpacing: 1.0,
                             fontFamily: 'Inter',
@@ -49,7 +50,7 @@ class ProductItems extends StatelessWidget {
                         Text(
                           '₱${price}',
                           style: TextStyle(
-                              fontSize: 16.0,
+                              fontSize: 16.0.sp,
                               fontWeight: FontWeight.w400,
                               fontFamily: 'Inter',
                           ),

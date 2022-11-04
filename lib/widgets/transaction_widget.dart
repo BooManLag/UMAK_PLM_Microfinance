@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/Screens/finance/financeTransaction.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TransWidget extends StatelessWidget {
   final Transactions transaction;
@@ -15,13 +16,13 @@ class TransWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 10.0),
+        padding:  REdgeInsets.only(bottom: 10.0),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10.0),
           child: Container(
-            padding: EdgeInsets.all(5.0),
+            padding: REdgeInsets.all(5.0),
             color: Color(0xFFEEEEEE),
-            height: 50.0,
+            height: 50.0.h,
             child: Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,7 +30,7 @@ class TransWidget extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(5.0),
+                          padding: REdgeInsets.all(5.0),
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color: transaction.classification == 'expense' ?  Colors.red : Colors.green
@@ -41,11 +42,11 @@ class TransWidget extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(width: 10.h,),
                         Text(
                           transaction.transactionName,
                           style: TextStyle(
-                            fontSize: 16.0,
+                            fontSize: 16.0.sp,
                           ),
                         ),
                       ],
@@ -54,7 +55,7 @@ class TransWidget extends StatelessWidget {
                       (transaction.classification == 'expense' ? '-' : '+') + '₱' + transaction.amount,
                       style: TextStyle(
                         color: (transaction.classification == 'expense' ? Colors.red : Colors.green),
-                        fontSize: 16.0,
+                        fontSize: 16.0.sp,
                       ),
                     )
                   ],

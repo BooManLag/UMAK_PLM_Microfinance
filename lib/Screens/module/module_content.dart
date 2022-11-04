@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ModuleContent extends StatelessWidget {
   final String title;
@@ -25,163 +26,165 @@ class ModuleContent extends StatelessWidget {
           'Apportunity',
           style: TextStyle(
               fontFamily: 'Inter',
-              fontSize: 24,
+              fontSize: 24.sp,
               fontWeight: FontWeight.w600,
               letterSpacing: 2.0,
               color: Colors.white
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 40.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(height: 20,),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(15.0,10.0,15.0,20.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        title,
-                        style: TextStyle(
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.w600,
-                            fontSize: 18,
-                            color: Colors.grey[800]
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 10,),
-                      Image.asset(
-                        image,
-                        height: 220,
-                        width: 400,
-                      ),
-                      SizedBox(height: 10,),
-                      Text(
-                        desc,
-                        style: TextStyle(
-                          fontFamily: 'Inter',
-                          fontSize: 14,
-                          color: Colors.grey[800]
-                        ),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 15,),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(15.0,10.0,15.0,10.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.location_on_outlined,
-                            color: Color(0xFF2F83D6),
-                          ),
-                          SizedBox(width: 10.0,),
-                          Text(
-                            'Location: ' + location,
-                            style: TextStyle(
-                                fontFamily: 'Inter',
-                                fontSize: 14,
-                                color: Colors.grey[800]
-                            ),
-                          ),
-                        ],
-                      ),
-                      Icon(
-                        Icons.ios_share_rounded,
-                        color: Color(0xFFFBBB00),
-                      ),
-                    ],
-                  ),
-                )
-              ),
-              SizedBox(height: 15,),
-              Container(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: REdgeInsets.fromLTRB(15.0, 0.0, 15.0, 20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(height: 20.h,),
+                Container(
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(15.0,10.0,15.0,10.0),
+                    padding: REdgeInsets.fromLTRB(15.0,10.0,15.0,20.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          title,
+                          style: TextStyle(
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18.sp,
+                              color: Colors.grey[800]
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 10.h,),
+                        Image.asset(
+                          image,
+                          height: 220.h,
+                          width: 400.w,
+                        ),
+                        SizedBox(height: 10.h,),
+                        Text(
+                          desc,
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 14.sp,
+                            color: Colors.grey[800]
+                          ),
+                          textAlign: TextAlign.justify,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 15.h,),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Padding(
+                    padding: REdgeInsets.fromLTRB(15.0,10.0,15.0,10.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
                           children: [
                             Icon(
-                              Icons.person,
+                              Icons.location_on_outlined,
                               color: Color(0xFF2F83D6),
                             ),
-                            SizedBox(width: 10.0,),
+                            SizedBox(width: 10.0.w,),
                             Text(
-                              'Demographic: ' + category,
+                              'Location: ' + location,
                               style: TextStyle(
                                   fontFamily: 'Inter',
-                                  fontSize: 14,
+                                  fontSize: 14.sp,
                                   color: Colors.grey[800]
                               ),
                             ),
                           ],
                         ),
+                        Icon(
+                          Icons.ios_share_rounded,
+                          color: Color(0xFFFBBB00),
+                        ),
                       ],
                     ),
                   )
-              ),
-              SizedBox(height: 15,),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: BorderRadius.circular(10.0),
                 ),
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(15.0,10.0,15.0,10.0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.link,
-                          color: Color(0xFF2F83D6)
-                      ),
-                      SizedBox(width: 10,),
-                      Column(
+                SizedBox(height: 15.h,),
+                Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Padding(
+                      padding: REdgeInsets.fromLTRB(15.0,10.0,15.0,10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            width: 300,
-                            child: Text(
-                              link,
-                              style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 14,
-                                  color: Colors.grey[800]
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.person,
+                                color: Color(0xFF2F83D6),
                               ),
-                            ),
-                          )
+                              SizedBox(width: 10.0.w,),
+                              Text(
+                                'Demographic: ' + category,
+                                style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontSize: 14.sp,
+                                    color: Colors.grey[800]
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
-                      )
-                    ],
+                      ),
+                    )
+                ),
+                SizedBox(height: 15.h,),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Padding(
+                    padding: REdgeInsets.fromLTRB(15.0,10.0,15.0,10.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.link,
+                            color: Color(0xFF2F83D6)
+                        ),
+                        SizedBox(width: 10.w,),
+                        Column(
+                          children: [
+                            Container(
+                              width: 300.w,
+                              child: Text(
+                                link,
+                                style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontSize: 14.sp,
+                                    color: Colors.grey[800]
+                                ),
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

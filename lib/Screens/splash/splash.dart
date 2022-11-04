@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled/Screens/intro/first.dart';
-import '../intro/first.dart';
-import 'homepage.dart';
 
 class Root extends StatelessWidget {
   const Root({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Welcome(),
+    return ScreenUtilInit(
+      builder: (context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Welcome(),
+      ),
+      designSize: const Size(412, 732),
     );
   }
 }
@@ -26,7 +28,7 @@ class Welcome extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height/1.6,
+            height: (MediaQuery.of(context).size.height/1.6),
             decoration: BoxDecoration(
                 color: Color(0xFFEEEEEE),
                 borderRadius: BorderRadius.only(
@@ -36,7 +38,7 @@ class Welcome extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 0.0),
+            padding: EdgeInsets.fromLTRB(30.0.w, 30.0.h, 30.0.w, 0.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -47,7 +49,7 @@ class Welcome extends StatelessWidget {
                         'Apportunity',
                         style: TextStyle(
                             fontWeight: FontWeight.w700,
-                            fontSize: 40.0,
+                            fontSize: 40.0.sp,
                             fontFamily: 'Inter',
                             color: Color(0xFFFBBB00)
                         ),
@@ -58,7 +60,7 @@ class Welcome extends StatelessWidget {
                       child: Text(
                         'Locate financial services \n& growth opportunities easier',
                         style: TextStyle(
-                            fontSize: 16.0,
+                            fontSize: 16.0.sp,
                             fontFamily: 'Inter',
                             color: Color(0xFF6E6E6E)
                         ),
@@ -70,7 +72,7 @@ class Welcome extends StatelessWidget {
                 Center(
                     child: Image.asset('assets/Logo.png')
                 ),
-                SizedBox(height: 10.0),
+                SizedBox(height: 10.0.h),
                 Column(
                   children: [
                     Center(
@@ -87,11 +89,11 @@ class Welcome extends StatelessWidget {
                             backgroundColor: Colors.white
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.fromLTRB(50.0,5.0,50.0,5.0),
+                          padding: EdgeInsets.symmetric(horizontal: 50.0.w, vertical: 5.0.h),
                           child: Text(
                             'Get Started',
                             style: TextStyle(
-                                fontSize: 14.0,
+                                fontSize: 14.0.sp,
                                 fontWeight: FontWeight.w600,
                                 fontFamily: 'Inter',
                                 color: Color(0xFF6E6E6E)
@@ -102,7 +104,7 @@ class Welcome extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 10.0),
+                SizedBox(height: 10.0.h),
               ],
             ),
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'financeTransaction.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddTransactionScreen extends StatefulWidget {
   final Function(Transactions) action;
@@ -37,11 +38,11 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: REdgeInsets.all(20.0),
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(bottom: 20.0),
+                padding: REdgeInsets.only(bottom: 20.0),
                 child: TextFormField(
                   key: UniqueKey(),
                   keyboardType: TextInputType.text,
@@ -51,8 +52,8 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                     labelText: 'Transaction Name',
                     hintText: 'Drinks',
                     border: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                        width: 1,
+                      borderSide: BorderSide(
+                        width: 1.w,
                         color: Color(0xFFEEEEEE),
                       ),
                       borderRadius: BorderRadius.circular(16),
@@ -61,7 +62,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 20.0),
+                padding:  REdgeInsets.only(bottom: 20.0),
                 child: TextFormField(
                   key: UniqueKey(),
                   keyboardType: TextInputType.text,
@@ -71,8 +72,8 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                     labelText: 'Amount',
                     hintText: '100',
                     border: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                        width: 1,
+                      borderSide: BorderSide(
+                        width: 1.w,
                         color: Color(0xFFEEEEEE),
                       ),
                       borderRadius: BorderRadius.circular(16),
@@ -81,7 +82,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 20.0),
+                padding: REdgeInsets.only(bottom: 20.0),
                 child: TextFormField(
                   key: UniqueKey(),
                   keyboardType: TextInputType.text,
@@ -91,8 +92,8 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                     labelText: 'Classification',
                     hintText: 'expense or income',
                     border: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                        width: 1,
+                      borderSide: BorderSide(
+                        width: 1.w,
                         color: Color(0xFFEEEEEE),
                       ),
                       borderRadius: BorderRadius.circular(16),
@@ -101,7 +102,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: REdgeInsets.all(20.0),
                 child: ElevatedButton(
                   onPressed: () async {
                     if (name.text.isEmpty || amount.text.isEmpty || classification.text.isEmpty) {

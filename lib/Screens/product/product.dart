@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/Screens/product/productCart.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:collection/collection.dart';
 import 'productItems.dart';
 import 'productTotal.dart';
@@ -80,63 +81,65 @@ class _ProductScreenState extends State<ProductScreen> {
             total = AddToCart.prices.sum;
           });
         },
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(10.0,30.0,10.0,10.0),
-          child: Column(
-            children: [
-              Center(
-                child: Text(
-                  'Basic Necessities List',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 28.0,
-                      color: Colors.white
-                  ),
-                ),
-              ),
-              SizedBox(height: 5.0,),
-              TextField(
-                onChanged: (value) => updateList(value),
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Color(0xFFEEEEEE),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(50.0),
-                    borderSide: BorderSide.none,
-                  ),
-                  hintText: 'Example: Canned Sardines',
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: Colors.grey,
-                  ),
-                ),
-              ),
-              SizedBox(height: 10.0,),
-              Expanded(
-                  child: Container(
-                    child: Center(
-                      child: Column(
-                        children: [
-                          Expanded(
-                            child: ListView.builder(
-                                itemCount: displayList.length,
-                                itemBuilder: (context,index){
-                                  return ProductItems(
-                                    productName: displayList[index].productName,
-                                    image: displayList[index].image,
-                                    price: displayList[index].price,
-                                  );
-                                }
-                            ),
-                          )
-                        ],
-                      ),
+        child: SafeArea(
+          child: Padding(
+            padding: REdgeInsets.all(10),
+            child: Column(
+              children: [
+                Center(
+                  child: Text(
+                    'Basic Necessities List',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 28.0.sp,
+                        color: Colors.white
                     ),
                   ),
-              ),
-              SizedBox(height: 10.0,),
-              Total(total: double.parse(total.toStringAsFixed(2)), type: true),
-            ],
+                ),
+                SizedBox(height: 5.0.h,),
+                TextField(
+                  onChanged: (value) => updateList(value),
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Color(0xFFEEEEEE),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                      borderSide: BorderSide.none,
+                    ),
+                    hintText: 'Example: Canned Sardines',
+                    prefixIcon: Icon(
+                      Icons.search,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10.0.h,),
+                Expanded(
+                    child: Container(
+                      child: Center(
+                        child: Column(
+                          children: [
+                            Expanded(
+                              child: ListView.builder(
+                                  itemCount: displayList.length,
+                                  itemBuilder: (context,index){
+                                    return ProductItems(
+                                      productName: displayList[index].productName,
+                                      image: displayList[index].image,
+                                      price: displayList[index].price,
+                                    );
+                                  }
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                ),
+                SizedBox(height: 10.0.h,),
+                Total(total: double.parse(total.toStringAsFixed(2)), type: true),
+              ],
+            ),
           ),
         ),
       ),

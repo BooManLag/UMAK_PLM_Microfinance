@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'module_content.dart';
 
 class ModuleWidget extends StatelessWidget {
@@ -32,7 +32,7 @@ class ModuleWidget extends StatelessWidget {
         );
       },
       child: Padding(
-        padding: EdgeInsets.only(bottom: 15),
+        padding: REdgeInsets.only(bottom: 15),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10.0),
           child: Container(
@@ -40,20 +40,20 @@ class ModuleWidget extends StatelessWidget {
                 color: Colors.grey[100],
                 border: Border.all(color: Colors.black87)
             ),
-            height: 170,
-            width: 170,
+            height: 170.h,
+            width: 170.w,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: REdgeInsets.all(10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
                     photo,
-                    height: 150,
-                    width: 100,
+                    height: 150.h,
+                    width: 100.w,
                   ),
-                  SizedBox(width: 7.0,),
+                  SizedBox(width: 7.0.w,),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +62,7 @@ class ModuleWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            width: 250,
+                            width: 250.w,
                             child: Text(
                               title,
                               maxLines: 1,
@@ -71,7 +71,7 @@ class ModuleWidget extends StatelessWidget {
                               style: TextStyle(
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
-                                fontSize: 14,
+                                fontSize: 14.sp,
                                 color: Colors.grey[800]
                               ),
                             ),
@@ -80,7 +80,7 @@ class ModuleWidget extends StatelessWidget {
                             company,
                             style: TextStyle(
                                 fontFamily: 'Inter',
-                                fontSize: 12,
+                                fontSize: 12.sp,
                                 color: Colors.grey[800]
                             ),
                           ),
@@ -89,7 +89,7 @@ class ModuleWidget extends StatelessWidget {
                       Column(
                         children: [
                           Container(
-                            width: 250,
+                            width: 250.w,
                             child: Text(
                               desc,
                               maxLines: 3,
@@ -97,7 +97,7 @@ class ModuleWidget extends StatelessWidget {
                               textAlign: TextAlign.justify,
                               style: TextStyle(
                                   fontFamily: 'Inter',
-                                  fontSize: 13,
+                                  fontSize: 13.sp,
                                   color: Colors.grey[800]
                               ),
                             ),
@@ -117,7 +117,7 @@ class ModuleWidget extends StatelessWidget {
                                 location,
                                 style: TextStyle(
                                     fontFamily: 'Inter',
-                                    fontSize: 15,
+                                    fontSize: 15.sp,
                                     color: Colors.grey[800],
                                   fontWeight: FontWeight.w400
                                 ),
@@ -134,7 +134,7 @@ class ModuleWidget extends StatelessWidget {
                                 category,
                                 style: TextStyle(
                                     fontFamily: 'Inter',
-                                    fontSize: 15,
+                                    fontSize: 15.sp,
                                     color: Colors.grey[800],
                                     fontWeight: FontWeight.w400
                                 ),

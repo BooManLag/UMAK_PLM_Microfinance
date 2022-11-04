@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MoneyCard extends StatelessWidget {
   final String balance;
@@ -9,13 +10,13 @@ class MoneyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: REdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Color(0xFFEEEEEE),
         ),
-        height: 200.0,
+        height: 200.0.h,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -25,7 +26,7 @@ class MoneyCard extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Inter',
                   letterSpacing: 5.0,
-                  fontSize: 16.0,
+                  fontSize: 16.0.sp,
                   color: Colors.grey[700]
                 ),
               ),
@@ -34,19 +35,19 @@ class MoneyCard extends StatelessWidget {
                 style: TextStyle(
                     fontFamily: 'Inter',
                     letterSpacing: 5.0,
-                    fontSize: 36.0,
+                    fontSize: 36.0.sp,
                     color:  Color(0xFF6E6E6E)
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+                padding: REdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
                         Container(
-                            padding: EdgeInsets.all(10),
+                            padding: REdgeInsets.all(10),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color: Colors.green,
@@ -58,7 +59,7 @@ class MoneyCard extends StatelessWidget {
                                 )
                               ]
                             ),
-                            child: Center(
+                            child: const Center(
                                 child: Icon(
                                   Icons.arrow_upward,
                                   color: Color(0xFFEEEEEE),
@@ -73,16 +74,18 @@ class MoneyCard extends StatelessWidget {
                               'Income',
                               style: TextStyle(
                                   fontFamily: 'Inter',
-                                  color:  Color(0xFF6E6E6E)
+                                  color:  Color(0xFF6E6E6E),
+                                  fontSize: 12.sp
                               ),
                             ),
-                            SizedBox(height: 5),
+                            SizedBox(height: 5.h),
                             Text(
                               '₱' + income,
                               style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                color:  Color(0xFF6E6E6E),
-                                fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w700,
+                                  color:  Color(0xFF6E6E6E),
+                                  fontFamily: 'Inter',
+                                  fontSize: 12.sp
                               ),
                             ),
                           ],
@@ -92,7 +95,7 @@ class MoneyCard extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(10),
+                          padding: REdgeInsets.all(10),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                               color: Colors.red,
@@ -104,14 +107,14 @@ class MoneyCard extends StatelessWidget {
                                 )
                               ]
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Icon(
                               Icons.arrow_downward,
                               color: Color(0xFFEEEEEE),
                             ),
                           ),
                         ),
-                        SizedBox(width: 10),
+                        SizedBox(width: 10.w),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -119,16 +122,18 @@ class MoneyCard extends StatelessWidget {
                               'Expenses',
                               style: TextStyle(
                                   fontFamily: 'Inter',
-                                  color:  Color(0xFF6E6E6E)
+                                  color:  Color(0xFF6E6E6E),
+                                  fontSize: 12.sp
                               ),
                             ),
-                            SizedBox(height: 5),
+                            SizedBox(height: 5.h),
                             Text(
                               '₱' + expenses,
                               style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontFamily: 'Inter',
-                                  color:  Color(0xFF6E6E6E)
+                                  color:  Color(0xFF6E6E6E),
+                                  fontSize: 12.sp
                               ),
                             ),
                           ],
