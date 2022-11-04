@@ -40,17 +40,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
             Column(
               children: [
                 Container(
-                  height: (MediaQuery.of(context).size.height * 0.19).h,
+                  height: (MediaQuery.of(context).size.height * 0.15).h,
                   color: Color(0xFF2F83D6),
                 ),
               ],
             ),
             Padding(
-              padding: REdgeInsets.fromLTRB(10.0, 5.0, 10.0, 10.0),
+              padding: REdgeInsets.fromLTRB(10.0, 15.0, 10.0, 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: 10.0.h),
                   Text(
                     'Welcome, User!',
                     style: TextStyle(
@@ -100,6 +101,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ],
                     ),
                   ),
+                  SizedBox(height: 10.0.h),
                   Column(
                     children: [
                       Row(
@@ -252,6 +254,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       )
                     ],
                   ),
+                  SizedBox(height: 10.0.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -362,7 +365,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ],
                       ),
                     ],
-                  )
+                  ),
+                  SizedBox(height: 10.0.h),
                 ],
               ),
             )
