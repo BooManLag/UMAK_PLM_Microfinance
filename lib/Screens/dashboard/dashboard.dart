@@ -41,7 +41,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
               children: [
                 Container(
                   height: (MediaQuery.of(context).size.height * 0.19).h,
-                  width: (MediaQuery.of(context).size.width).w,
                   color: Color(0xFF2F83D6),
                 ),
               ],
