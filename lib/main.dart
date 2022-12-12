@@ -7,4 +7,5 @@ Future<void> main() async{
   await HiveInjector.setup();
   var box = await Hive.openBox('myData');
   runApp(Root());
+  // test
 }
