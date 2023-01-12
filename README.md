@@ -1,5 +1,5 @@
 # Microfinance App
-test on main
+
 An application developed for 11th IT Skills Competition under the Android Development - Microfinance
 
 ## Getting Started
